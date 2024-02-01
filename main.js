@@ -14,7 +14,7 @@ function registrarDatos() {
       let codigo = document.getElementById('codigo').value;
 
       if (ubicacion === 'France') {
-        axios.get("https://argentinabd.000webhostapp.com/api-francia/index.php="+ producto + "&cantidad=" + cantidad + "&codigo=" + codigo + "&ubicacion=" + ubicacion)
+        axios.get("https://argentinabd.000webhostapp.com/api-francia/index.php?producto="+ producto + "&cantidad=" + cantidad + "&codigo=" + codigo + "&ubicacion=" + ubicacion)
           .then(function (response) {
             console.log(response.data);
           })
@@ -30,7 +30,7 @@ function registrarDatos() {
             console.log(error);
           });
       } else if (ubicacion === 'India') {
-axios.get("https://baseindiabd.000webhostapp.com/api-india/index.php"+ producto + "&cantidad=" + cantidad + "&codigo=" + codigo + "&ubicacion=" + ubicacion)
+axios.get("https://baseindiabd.000webhostapp.com/api-india/index.php?producto="+ producto + "&cantidad=" + cantidad + "&codigo=" + codigo + "&ubicacion=" + ubicacion)
           .then(function (response) {
             console.log(response.data);
           })
