@@ -30,7 +30,10 @@ function registrarDatos() {
             console.log(error);
           });
       } else if (ubicacion === 'India') {
-        axios.get("https://baseindiabd.000webhostapp.com/api-india/index.php"+ producto + "&cantidad=" + cantidad + "&codigo=" + codigo + "&ubicacion=" + ubicacion)
+
+axios.get("https://baseindiabd.000webhostapp.com/api-india/index.php?producto="+ producto + "&cantidad=" + cantidad + "&codigo=" + codigo + "&ubicacion=" + ubicacion)
+
+
           .then(function (response) {
             console.log(response.data);
           })
